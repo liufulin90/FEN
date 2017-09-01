@@ -483,8 +483,9 @@ a {
 	.container .left-bar .category-nav {
 		width: 100%;
 		overflow: hidden;
-		height: 40px;
-		position: relative
+		height: 50px;
+		position: relative;
+		box-shadow: 0 3px 8px rgba(0,0,0,0.4);
 	}
 
 	.container .left-bar .nav {
@@ -525,8 +526,8 @@ a {
 	}
 
 	.container .left-bar .nav li {
-		height: .7rem;
-		line-height: .7rem
+		height: .75rem;
+		line-height: .75rem
 	}
 
 	.container .left-bar .nav li i {
@@ -644,6 +645,9 @@ a {
 @media (min-width: 380px) and (max-width: 480px) {
 	.container .main .fe .item .desc {
 		height: .52rem
+	}
+	.container .left-bar .nav li:last-child{
+		margin: 0px;
 	}
 }
 
