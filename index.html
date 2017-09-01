@@ -1,3 +1,4 @@
+<!-- copyright Flynn, www.linxins.com -->
 <!DOCTYPE html>
 <html style="font-size: 71.875px;">
 <head>
@@ -22,7 +23,7 @@
           <ul id="categoryList">
 
             <li id="blog" class=" active">
-              <a data-id="blog" href="#blogItem">
+              <a data-id="blog" href="#shangjinWrap">
                 <i data-id="blog" class="iconfont icon-zuzhi"></i>团队组织
               </a>
             </li>
@@ -150,6 +151,11 @@
   </div>
   <div class="main" id="mainWrap">
     <div id="mainContent">
+      <div class="fe" id="shangjinWrap">
+        <img class="shangjin-icon" src="static/images/shangjin-icon.png">
+        <p>如果你觉得非常有帮助，可以给点小小的赞赏！！！</p>
+        <img class="pay" src="static/images/alipay-wechatpay.png">
+      </div>
       <div class="fe" id="blogItem">
         <div class="sub-category">
           <div>
@@ -158,7 +164,6 @@
           </div>
         </div>
         <div>
-
           <a target="_blank" href="http://taobaofed.org/">
             <div class="item">
               <div class="logo">
@@ -1736,20 +1741,22 @@
   </div>
 
 </div>
+<script src="https://cdn.bootcss.com/jquery/2.1.4/jquery.min.js"></script>
 <script>
-  var categoryList = document.getElementById('categoryList').querySelectorAll('li');
-  addEvent();
-  function addEvent () {
-    categoryList.forEach(function (item) {
-      item.addEventListener('click', function () {
-        restClass();
-        this.className = 'active';
-      }, true)
-    })
-  }
+  $(function(){
+    $('#categoryList li').click(function(){
+      restClass();
+      $(this).addClass('active');
+    });
+    $('#shangjinWrap').hover(function () {
+      $(this).find('.pay').show();
+    },function () {
+      $(this).find('.pay').hide();
+    });
+  });
   function restClass () {
-    categoryList.forEach(function (item) {
-      item.className = '';
+    $('#categoryList li').each(function () {
+      $(this).removeClass('active');
     })
   }
 </script>

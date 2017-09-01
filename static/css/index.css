@@ -175,6 +175,32 @@ a {
 .gb-box .gb-top{
 	margin: 20px 0 40px;
 }
+#shangjinWrap{
+	text-align: center;
+	position: relative;
+	cursor: help;
+}
+#shangjinWrap.fe{
+	padding-bottom: 10px;
+}
+#shangjinWrap .shangjin-icon{
+	width: 50px;
+	margin: 10px 0;
+}
+#shangjinWrap p{
+	color: #2BB4B6;
+	font-size: 14px;
+}
+#shangjinWrap .pay{
+	display: none;
+	position: fixed;
+	width: 90%;
+	left: 7%;
+	z-index: 100001;
+	top: 100px;
+	box-shadow: 0 0 10px rgba(0,0,0,0.6);
+	border-radius: 5px;
+}
 .recommend {
 	height: 160px;
 	background: #fff;
@@ -258,7 +284,9 @@ a {
 	line-height: 32px;
 	padding-left: 20px
 }
-
+.container .left-bar .nav li:last-child{
+	margin-bottom: 110px;
+}
 .container .left-bar .nav li i {
 	padding-right: 15px;
 	font-size: 12px;
@@ -626,6 +654,10 @@ a {
 	.gb-box{
 		width: 100%;
 	}
+	#shangjinWrap .pay{
+		width: 50%;
+		left: 40%;
+	}
 }
 
 @media (min-width: 768px) {
@@ -635,6 +667,10 @@ a {
 
 	.gb-box{
 		width: 80%;
+	}
+	#shangjinWrap .pay{
+		width: 60%;
+		left: 30%;
 	}
 }
 
@@ -646,6 +682,10 @@ a {
 	.gb-box{
 		width: 80%;
 	}
+	#shangjinWrap .pay{
+		width: 55%;
+		left: 30%;
+	}
 }
 
 @media (min-width: 1200px) {
@@ -654,5 +694,9 @@ a {
 	}
 	.gb-box{
 		width: 1100px;
+	}
+	#shangjinWrap .pay{
+		width: 50%;
+		left: 35%;
 	}
 }
