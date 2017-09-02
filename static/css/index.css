@@ -646,6 +646,11 @@ a {
     .gb-box{
 	    width: 96%;
     }
+
+	#shangjinWrap .pay{
+		width: 90%;
+		left: 5%;
+	}
 }
 
 @media (min-width: 380px) and (max-width: 480px) {
