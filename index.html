@@ -1774,7 +1774,7 @@
     <div class="footer">
       <div cxlass="copyright">
         <div>
-          Copyright © 2014- 2017
+          Copyright © 2016 - <span id="thisYear"></span>
           <a href="http://www.linxins.com/">
             Flynn
           </a>
@@ -1796,6 +1796,7 @@
     },function () {
       $(this).find('.pay').hide();
     });
+    $('#thisYear').text(new Date().getFullYear())
   });
   function restClass () {
     $('#categoryList li').each(function () {
