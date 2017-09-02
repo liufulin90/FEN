@@ -201,6 +201,10 @@ a {
 	box-shadow: 0 0 10px rgba(0,0,0,0.6);
 	border-radius: 5px;
 }
+#shangjinWrap .pay img {
+	width: 50%;
+	float: left;
+}
 .recommend {
 	height: 160px;
 	background: #fff;
