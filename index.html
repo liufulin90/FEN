@@ -1770,6 +1770,33 @@
 
         </div>
       </div>
+
+      <div class="fe">
+        <div class="sub-category">
+          <div>
+            <i class="iconfont"></i>
+            View And Admire
+          </div>
+        </div>
+        <div>
+
+        <div class="item">
+          <div class="logo">
+            <img data-original="./static/images/browse.png" class="loaded" src="static/images/browse.png"
+                 width="100%">
+            <span id="visitorTimes"></span>
+          </div>
+        </div>
+        <div class="item" style="cursor: pointer;" id="praiseWrap">
+          <div class="logo">
+            <img data-original="./static/images/praise.png" class="loaded" src="static/images/praise.png"
+                 width="100%">
+            <span id="praiseTimes"></span>
+          </div>
+        </div>
+
+        </div>
+      </div>
     </div>
     <div class="footer">
       <div cxlass="copyright">
@@ -1797,12 +1824,34 @@
     },function () {
       $(this).find('.pay').hide();
     });
-    $('#thisYear').text(new Date().getFullYear())
+    $('#thisYear').text(new Date().getFullYear());
+    loadVisitorTimes();
+    $('#praiseWrap').click(function(){
+      $.ajax({
+        url: 'praise.php',
+        success: function(res){
+          if (res.code == 20000) {
+            $('#praiseTimes').text(res.data.praise);
+          }
+        }
+      });
+    });
   });
   function restClass () {
     $('#categoryList li').each(function () {
       $(this).removeClass('active');
     })
+  }
+  function loadVisitorTimes () {
+    $.ajax({
+      url: 'redis.php',
+      success: function(res){
+        if (res.code == 20000) {
+          $('#visitorTimes').text(res.data.visitor);
+          $('#praiseTimes').text(res.data.praise);
+        }
+      }
+    });
   }
 </script>
 </body>
