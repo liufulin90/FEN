@@ -108,3 +108,7 @@
 .icon-jiantou:before {
     content: "\e6a9";
 }
+
+.icon-uiframe:before {
+    content: "\2618";
+}
